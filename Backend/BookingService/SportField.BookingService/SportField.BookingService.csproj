@@ -6,4 +6,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Application\Behaviors\" />
+    <Folder Include="Application\Commands\" />
+    <Folder Include="Application\Queries\" />
+    <Folder Include="Domain\Exceptions\" />
+    <Folder Include="Domain\Repositories\" />
+    <Folder Include="Infrastructure\Repositories\" />
+  </ItemGroup>
+
 </Project>

@@ -21,7 +21,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportField.FileService", "B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportField.BookingService", "Backend\BookingService\SportField.BookingService\SportField.BookingService.csproj", "{F4253024-8808-4CC8-847D-D674EB7A28BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportField.Contract", "Backend\Contract\SportField.Contract\SportField.Contract.csproj", "{BEA56179-136C-4EFF-B7D8-4978A4D490A5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportField.Contracts", "Backend\Contract\SportField.Contract\SportField.Contracts.csproj", "{BEA56179-136C-4EFF-B7D8-4978A4D490A5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Backend\Common\Common.csproj", "{EB7F9AE9-AFF6-46DD-A225-E565B817C3F8}"
 EndProject

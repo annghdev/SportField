@@ -14,4 +14,14 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BookingService\SportField.BookingService\SportField.BookingService.csproj" />
+    <ProjectReference Include="..\Common\Common.csproj" />
+    <ProjectReference Include="..\Contract\SportField.Contract\SportField.Contracts.csproj" />
+    <ProjectReference Include="..\FieldService\SportField.FieldService\SportField.FieldService.csproj" />
+    <ProjectReference Include="..\FileService\SportField.FileService\SportField.FileService.csproj" />
+    <ProjectReference Include="..\IdentityService\SportField.IdentityService\SportField.IdentityService.csproj" />
+    <ProjectReference Include="..\NotificationService\SportField.NotificationService\SportField.NotificationService.csproj" />
+  </ItemGroup>
+
 </Project>
