@@ -1,11 +1,11 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace SportField.BookingService;
+namespace SportField.FileService;
 
 public static class ServicesRegistration
 {
-    public static IServiceCollection AddBookingService(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddFileService(this IServiceCollection services, IConfiguration configuration)
     {
         return services;
     }

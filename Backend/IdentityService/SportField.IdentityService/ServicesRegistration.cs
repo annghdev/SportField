@@ -1,11 +1,11 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace SportField.FieldService;
+namespace SportField.IdentityService;
 
 public static class ServicesRegistration
 {
-    public static IServiceCollection AddFieldService(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddIdentityService(this IServiceCollection services, IConfiguration configuration)
     {
         return services;
     }
