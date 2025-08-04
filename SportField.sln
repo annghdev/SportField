@@ -21,9 +21,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportField.FileService", "B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportField.BookingService", "Backend\BookingService\SportField.BookingService\SportField.BookingService.csproj", "{F4253024-8808-4CC8-847D-D674EB7A28BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportField.Contracts", "Backend\Contract\SportField.Contract\SportField.Contracts.csproj", "{BEA56179-136C-4EFF-B7D8-4978A4D490A5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Backend\Contract\SportField.Contract\Contracts.csproj", "{BEA56179-136C-4EFF-B7D8-4978A4D490A5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Backend\Common\Common.csproj", "{EB7F9AE9-AFF6-46DD-A225-E565B817C3F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportField.PaymentService", "Backend\PaymentService\SportField.PaymentService\SportField.PaymentService.csproj", "{E822E39A-1387-4AA6-9324-F8824F222D1B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{EB7F9AE9-AFF6-46DD-A225-E565B817C3F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB7F9AE9-AFF6-46DD-A225-E565B817C3F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB7F9AE9-AFF6-46DD-A225-E565B817C3F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E822E39A-1387-4AA6-9324-F8824F222D1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E822E39A-1387-4AA6-9324-F8824F222D1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E822E39A-1387-4AA6-9324-F8824F222D1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E822E39A-1387-4AA6-9324-F8824F222D1B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -76,6 +82,7 @@ Global
 		{F4253024-8808-4CC8-847D-D674EB7A28BB} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{BEA56179-136C-4EFF-B7D8-4978A4D490A5} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{EB7F9AE9-AFF6-46DD-A225-E565B817C3F8} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{E822E39A-1387-4AA6-9324-F8824F222D1B} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {83FE1614-D6AF-473E-9EAB-1ACF16A9EDF2}

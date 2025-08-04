@@ -6,4 +6,19 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Application\Behaviors\" />
+    <Folder Include="Application\Commands\" />
+    <Folder Include="Application\Queries\" />
+    <Folder Include="Domain\Entities\" />
+    <Folder Include="Domain\Exceptions\" />
+    <Folder Include="Domain\Repositories\" />
+    <Folder Include="Infrastructure\Repositories\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Common.csproj" />
+    <ProjectReference Include="..\..\Contract\SportField.Contract\Contracts.csproj" />
+  </ItemGroup>
+
 </Project>

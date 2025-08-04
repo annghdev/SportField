@@ -3,16 +3,13 @@
     public enum BookingStatus
     {
         Pending = 0,
-        Confirmed = 1,
-        CancelledByUser = 2,
-        CancelledByAdmin = 3,
+        Expired = 1, // Quá hạn duyệt
+        Confirmed = 2,
+        CancelledByUser = 3,
         CancelledByDueToNonPayment = 4,
-        PartiallyPaid = 5,
-        Paid = 6,
-        Expired = 7,
-        NoShow = 8,
-        Refunded = 9,
-        Completed = 10,
-        Blocked = 11
+        CancelledByAdmin = 5,
+        NoShow = 6, // Khách không đến
+        Completed = 7, // Đã kết thúc
+        Blocked = 8 // Nghi vấn, gian lận
     }
 }

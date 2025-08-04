@@ -4,12 +4,12 @@ namespace Common.Abstractions
 {
     public abstract class BaseEntity<T>
     {
-        public T Id { get; set; }
-        private readonly List<IDomainEvent> _domainEvents = [];
+        public virtual T Id { get; set; }
+        private readonly List<BaseDomainEvent> _domainEvents = [];
         [NotMapped]
-        public IReadOnlyCollection<IDomainEvent> DomainEvents => _domainEvents.AsReadOnly();
+        public IReadOnlyCollection<BaseDomainEvent> DomainEvents => _domainEvents.AsReadOnly();
 
-        public void AddDomainEvent(IDomainEvent domainEvent)
+        public void AddDomainEvent(BaseDomainEvent domainEvent)
         {
             _domainEvents.Add(domainEvent);
         }
@@ -17,5 +17,9 @@ namespace Common.Abstractions
         {
             _domainEvents.Clear();
         }
+    }
+    public abstract class BaseEntity : BaseEntity<string>
+    {
+        public override string Id { get; set; } = Guid.CreateVersion7().ToString();
     }
 }
