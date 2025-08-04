@@ -9,8 +9,8 @@
         public bool IsDeleted { get; set; }
     }
 
-    public abstract class AggregateRoot : AggregateRoot<string>
+    public abstract class AggregateRoot : AggregateRoot<Guid>
     {
-        public override string Id { get; set; } = Guid.CreateVersion7().ToString();
+        public override Guid Id { get; set; } = Guid.CreateVersion7();
     }
 }

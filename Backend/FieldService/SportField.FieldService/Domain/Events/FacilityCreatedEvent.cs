@@ -3,7 +3,7 @@
 namespace SportField.FieldService.Domain.Events;
 
 public record FacilityCreatedEvent(
-    string FacilityId,
+    Guid FacilityId,
     string Name,
     string Address
 ) : BaseDomainEvent;

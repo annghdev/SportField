@@ -164,8 +164,8 @@
 									},
 									"font": "Arial;13;1",
 									"parentStyle": true,
-									"left": 752,
-									"top": 261,
+									"left": 816,
+									"top": 197,
 									"width": 61.99365234375,
 									"height": 13,
 									"text": "Booking"
@@ -181,16 +181,16 @@
 									},
 									"font": "Arial;13;0",
 									"parentStyle": true,
-									"left": 752,
-									"top": 279,
+									"left": 816,
+									"top": 215,
 									"width": 61.99365234375,
 									"height": 10
 								}
 							],
 							"font": "Arial;13;0",
 							"parentStyle": false,
-							"left": 752,
-							"top": 256,
+							"left": 816,
+							"top": 192,
 							"width": 61.99365234375,
 							"height": 33,
 							"nameLabel": {
@@ -218,8 +218,8 @@
 									},
 									"font": "Arial;13;1",
 									"parentStyle": true,
-									"left": 792,
-									"top": 405,
+									"left": 912,
+									"top": 197,
 									"width": 67.08447265625,
 									"height": 13,
 									"text": "PickLock"
@@ -235,16 +235,16 @@
 									},
 									"font": "Arial;13;0",
 									"parentStyle": true,
-									"left": 792,
-									"top": 423,
+									"left": 912,
+									"top": 215,
 									"width": 67.08447265625,
 									"height": 10
 								}
 							],
 							"font": "Arial;13;0",
 							"parentStyle": false,
-							"left": 792,
-							"top": 400,
+							"left": 912,
+							"top": 192,
 							"width": 67.08447265625,
 							"height": 33,
 							"nameLabel": {
@@ -1256,6 +1256,130 @@
 							"headNameLabel": {
 								"$ref": "AAAAAAGYdIUjcoRiVG4="
 							}
+						},
+						{
+							"_type": "UMLNoteView",
+							"_id": "AAAAAAGYdKud2oSGM18=",
+							"_parent": {
+								"$ref": "AAAAAAGYdGsDc4Mb7lE="
+							},
+							"font": "Arial;13;0",
+							"parentStyle": false,
+							"left": 512,
+							"top": 216,
+							"width": 96,
+							"height": 64,
+							"text": "Giá sân tương ứng với khung giờ và ngày"
+						},
+						{
+							"_type": "UMLNoteLinkView",
+							"_id": "AAAAAAGYdKxrL4SNlrE=",
+							"_parent": {
+								"$ref": "AAAAAAGYdGsDc4Mb7lE="
+							},
+							"font": "Arial;13;0",
+							"parentStyle": false,
+							"head": {
+								"$ref": "AAAAAAGYdKud2oSGM18="
+							},
+							"tail": {
+								"$ref": "AAAAAAGYdHG714Nl3kg="
+							},
+							"lineStyle": 1,
+							"points": "407:282;511:259"
+						},
+						{
+							"_type": "UMLNoteView",
+							"_id": "AAAAAAGYdKyUUoSQaL8=",
+							"_parent": {
+								"$ref": "AAAAAAGYdGsDc4Mb7lE="
+							},
+							"font": "Arial;13;0",
+							"parentStyle": false,
+							"left": 32,
+							"top": 192,
+							"width": 144,
+							"height": 51,
+							"text": "Giờ mở/đóng cửa của sân cho từng ngày"
+						},
+						{
+							"_type": "UMLNoteLinkView",
+							"_id": "AAAAAAGYdKzvuoSU0BA=",
+							"_parent": {
+								"$ref": "AAAAAAGYdGsDc4Mb7lE="
+							},
+							"font": "Arial;13;0",
+							"parentStyle": false,
+							"head": {
+								"$ref": "AAAAAAGYdKyUUoSQaL8="
+							},
+							"tail": {
+								"$ref": "AAAAAAGYdHlT0YOulew="
+							},
+							"lineStyle": 1,
+							"points": "150:367;112:244"
+						},
+						{
+							"_type": "UMLNoteView",
+							"_id": "AAAAAAGYdK0tUYSa9fg=",
+							"_parent": {
+								"$ref": "AAAAAAGYdGsDc4Mb7lE="
+							},
+							"font": "Arial;13;0",
+							"parentStyle": false,
+							"left": 104,
+							"top": 552,
+							"width": 70,
+							"height": 40,
+							"text": "Lịch bảo trì sân"
+						},
+						{
+							"_type": "UMLNoteLinkView",
+							"_id": "AAAAAAGYdK1PgISe82A=",
+							"_parent": {
+								"$ref": "AAAAAAGYdGsDc4Mb7lE="
+							},
+							"font": "Arial;13;0",
+							"parentStyle": false,
+							"head": {
+								"$ref": "AAAAAAGYdHSIB4NyqmY="
+							},
+							"tail": {
+								"$ref": "AAAAAAGYdK0tUYSa9fg="
+							},
+							"lineStyle": 1,
+							"points": "151:551;177:506"
+						},
+						{
+							"_type": "UMLNoteView",
+							"_id": "AAAAAAGYdK9z6YShLLU=",
+							"_parent": {
+								"$ref": "AAAAAAGYdGsDc4Mb7lE="
+							},
+							"font": "Arial;13;0",
+							"parentStyle": false,
+							"left": 448,
+							"top": 528,
+							"width": 152,
+							"height": 51,
+							"text": "Quản lý việc khóa/mở các khung giờ một cách thủ công"
+						},
+						{
+							"_type": "UMLNoteLinkView",
+							"_id": "AAAAAAGYdK/Vm4SrGDg=",
+							"_parent": {
+								"$ref": "AAAAAAGYdGsDc4Mb7lE="
+							},
+							"font": "Arial;13;0",
+							"parentStyle": false,
+							"head": {
+								"$ref": "AAAAAAGYdK9z6YShLLU="
+							},
+							"tail": {
+								"$ref": "AAAAAAGYdHVgWIOLtuM="
+							},
+							"lineStyle": 1,
+							"points": "404:506;458:527"
 						}
 					]
 				},

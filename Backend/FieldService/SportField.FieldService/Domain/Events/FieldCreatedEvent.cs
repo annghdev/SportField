@@ -4,8 +4,8 @@ using Common.Enums;
 namespace SportField.FieldService.Domain.Events;
 
 public record FieldCreatedEvent(
-    string FieldId,
+    Guid FieldId,
     string Name,
-    string FacilityId,
+    Guid FacilityId,
     FieldType Type
 ) : BaseDomainEvent; 

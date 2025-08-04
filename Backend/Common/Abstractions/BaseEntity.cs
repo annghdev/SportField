@@ -18,8 +18,8 @@ namespace Common.Abstractions
             _domainEvents.Clear();
         }
     }
-    public abstract class BaseEntity : BaseEntity<string>
+    public abstract class BaseEntity : BaseEntity<Guid>
     {
-        public override string Id { get; set; } = Guid.CreateVersion7().ToString();
+        public override Guid Id { get; set; } = Guid.CreateVersion7();
     }
 }

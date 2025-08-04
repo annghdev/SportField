@@ -3,7 +3,7 @@ using Common.Abstractions;
 namespace SportField.FieldService.Domain.Events;
 
 public record FieldClosedForDayEvent(
-    string FieldId,
+    Guid FieldId,
     DayOfWeek DayOfWeek,
     string? Reason
 ) : BaseDomainEvent; 
