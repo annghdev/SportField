@@ -1,4 +1,4 @@
-@SportField.WebAPI_HostAddress = http://localhost:5236
+@SportField.WebAPI_HostAddress = https://localhost:5001
 
 GET {{SportField.WebAPI_HostAddress}}/weatherforecast/
 Accept: application/json

@@ -2,7 +2,7 @@
 
 namespace SportField.FieldService.Infrastructure
 {
-    public class FieldDbContext : DbContext
+    public class BookingDbContext : DbContext
     {
     }
 }
