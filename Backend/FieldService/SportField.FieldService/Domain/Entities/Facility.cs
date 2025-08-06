@@ -6,7 +6,7 @@ namespace SportField.FieldService.Domain.Entities;
 /// <summary>
 /// Đại diện cho một cơ sở thể thao (trung tâm, sân bóng, câu lạc bộ) chứa nhiều sân
 /// </summary>
-public class Facility : AggregateRoot
+public class Facility : AuditableEntity, IAggregateRoot
 {
     public required string Name { get; set; }
     public required string Address { get; set; }

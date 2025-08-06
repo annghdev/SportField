@@ -8,10 +8,10 @@ namespace SportField.FieldService.Domain.Entities;
 /// <summary>
 /// Đại diện cho một sân cụ thể trong cơ sở (sân bóng đá, sân cầu lông, sân tennis...)
 /// </summary>
-public class Field : AggregateRoot
+public class Field : AuditableEntity, IAggregateRoot
 {
     public required string Name { get; set; }
-    public required string FacilityId { get; set; }
+    public Guid FacilityId { get; set; }
     public FieldType Type { get; set; }
     public decimal BasePrice { get; set; }
     public string? Description { get; set; }
@@ -25,7 +25,7 @@ public class Field : AggregateRoot
     public virtual ICollection<FieldMaintenance> MaintenanceSchedules { get; set; } = [];
     public virtual ICollection<FieldAvailability> BlockedAvailabilities { get; set; } = [];
 
-    public static Field Create(string name, string facilityId, FieldType type, decimal basePrice, int capacity = 10, string? description = null)
+    public static Field Create(string name, Guid facilityId, FieldType type, decimal basePrice, int capacity = 10, string? description = null)
     {
         if (string.IsNullOrWhiteSpace(name))
             throw new InvalidFieldNameException("Field name cannot be empty.");
@@ -247,7 +247,7 @@ public class Field : AggregateRoot
         ModifiedDate = DateTime.UtcNow;
     }
 
-    public void BlockAvailability(Guid timeSlotId, DateTime fromDate, string blockedBy, DateTime? toDate = null, string? reason = null)
+    public void BlockAvailability(string timeSlotId, DateTime fromDate, string blockedBy, DateTime? toDate = null, string? reason = null)
     {
         // Optional: Check for conflicts with existing bookings if this service has access to that info.
         // For now, we just add the block.

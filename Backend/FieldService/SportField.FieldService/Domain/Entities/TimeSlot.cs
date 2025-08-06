@@ -5,7 +5,7 @@ namespace SportField.FieldService.Domain.Entities;
 /// <summary>
 /// Định nghĩa các khung thời gian cố định có thể đặt sân
 /// </summary>
-public class TimeSlot : BaseEntity<string>
+public class TimeSlot : AuditableEntity<string>, IAggregateRoot
 {
     public TimeOnly StartTime { get; set; }
     public TimeOnly EndTime { get; set; }

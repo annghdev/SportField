@@ -1,7 +1,7 @@
 ﻿namespace Common.Abstractions;
 
 public interface IBulkRepository<T, K> : IWriteRepository<T, K>
-    where T : AggregateRoot<K>
+    where T : IAggregateRoot
 {
     Task BulkAddAsync(IEnumerable<T> entities, CancellationToken cancellationToken = default);
     Task BulkUpdateAsync(IEnumerable<T> entities, CancellationToken cancellationToken = default);

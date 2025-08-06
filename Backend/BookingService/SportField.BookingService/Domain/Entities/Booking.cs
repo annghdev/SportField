@@ -6,7 +6,7 @@ namespace SportField.BookingService.Domain.Entities;
 /// <summary>
 /// Entity chính đại diện cho một đơn đặt sân (Individual hoặc Recurring)
 /// </summary>
-public class Booking : AggregateRoot
+public class Booking : AuditableEntity, IAggregateRoot
 {
     // Thông tin cơ bản
     public BookingType Type { get; set; }
@@ -91,7 +91,7 @@ public class Booking : AggregateRoot
         AddStatusHistory(BookingStatus.Confirmed, "Booking confirmed");
     }
 
-    public void Cancel(string reason, string? cancelledByUserId = null)
+    public void Cancel(string reason, Guid? cancelledByUserId = null)
     {
         Status = BookingStatus.Cancelled;
         CancelledDate = DateTime.UtcNow;
@@ -109,7 +109,7 @@ public class Booking : AggregateRoot
         ModifiedDate = DateTime.UtcNow;
     }
 
-    private void AddStatusHistory(BookingStatus status, string? notes = null, string? changedByUserId = null)
+    private void AddStatusHistory(BookingStatus status, string? notes = null, Guid? changedByUserId = null)
     {
         StatusHistory.Add(BookingStatusHistory.Create(Id, status, notes, changedByUserId));
     }

@@ -5,9 +5,8 @@ namespace SportField.BookingService.Domain.Entities;
 
 /// <summary>
 /// Entity đại diện cho ma trận bảng lịch: intersection của (Field, TimeSlot, Date)
-/// Thay thế CalendarSlot để phù hợp với requirement matrix view
 /// </summary>
-public class CalendarSlotMatrix : BaseEntity
+public class CalendarSlotMatrix : AuditableEntity, IAggregateRoot
 {
     public Guid FacilityId { get; set; }
     public Guid FieldId { get; set; }

@@ -1,6 +1,6 @@
 ﻿namespace Common.Abstractions
 {
-    public abstract class AggregateRoot<T> : BaseEntity<T>
+    public abstract class AuditableEntity<T> : BaseEntity<T>
     {
         public DateTime CreatedDate { get; set; }
         public string? CreatedBy { get; set; }
@@ -9,7 +9,7 @@
         public DateTime? DeletedDate { get; set; }
     }
 
-    public abstract class AggregateRoot : AggregateRoot<Guid>
+    public abstract class AuditableEntity : AuditableEntity<Guid>
     {
         public override Guid Id { get; set; } = Guid.CreateVersion7();
     }

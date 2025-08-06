@@ -6,7 +6,7 @@ namespace SportField.BookingService.Domain.Entities;
 /// <summary>
 /// Quản lý khóa tạm thời slot trong quá trình booking (real-time conflict prevention)
 /// </summary>
-public class SlotLock : BaseEntity
+public class SlotLock : AuditableEntity, IAggregateRoot
 {
     public Guid FieldId { get; set; }
     public required string TimeSlotId { get; set; }

@@ -6,10 +6,11 @@
 ```
 BaseEntity<T> (Generic base)
 ├── BaseEntity (Guid-based)
-└── AggregateRoot<T> (Generic aggregate)
-    └── AggregateRoot (Guid-based)
-        ├── Field (Aggregate Root)
-        └── Facility (Aggregate Root)
+└── AuditableEntity<T> (Generic aggregate)
+    └── AuditableEntity (Guid-based)
+        ├── Field (IAggregateRoot)
+        ├── Facility (IAggregateRoot)
+        └── TimeSlot (IAggregateRoot)
 ```
 
 ### BaseEntity - Lớp cơ sở cho tất cả entities
@@ -19,7 +20,7 @@ BaseEntity<T> (Generic base)
 - `Id`: Khóa chính duy nhất (Guid.CreateVersion7() - UUID v7 có thứ tự thời gian)
 - `DomainEvents`: Danh sách các sự kiện miền để xử lý nghiệp vụ bất đồng bộ
 
-### AggregateRoot - Lớp gốc tập hợp
+### AuditableEntity
 **Mục đích**: Quản lý audit trail và đảm bảo tính nhất quán dữ liệu
 
 **Các trường dữ liệu:**

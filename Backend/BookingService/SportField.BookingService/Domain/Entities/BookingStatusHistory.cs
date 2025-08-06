@@ -12,14 +12,14 @@ public class BookingStatusHistory : BaseEntity
     public BookingStatus FromStatus { get; set; }
     public BookingStatus ToStatus { get; set; }
     public string? ChangeReason { get; set; }
-    public string? ChangedByUserId { get; set; } // User hoặc Admin thực hiện thay đổi
+    public Guid? ChangedByUserId { get; set; } // User hoặc Admin thực hiện thay đổi
     public DateTime ChangedDate { get; set; }
 
     // Navigation properties
     public virtual Booking Booking { get; set; } = null!;
 
     public static BookingStatusHistory Create(Guid bookingId, BookingStatus toStatus, 
-        string? reason = null, string? changedByUserId = null, BookingStatus fromStatus = BookingStatus.Pending)
+        string? reason = null, Guid? changedByUserId = null, BookingStatus fromStatus = BookingStatus.Pending)
     {
         return new BookingStatusHistory
         {

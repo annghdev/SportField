@@ -6,7 +6,7 @@ namespace SportField.BookingService.Domain.Entities;
 /// <summary>
 /// Quản lý thanh toán cho booking với workflow phức tạp
 /// </summary>
-public class BookingPayment : AggregateRoot
+public class BookingPayment : AuditableEntity, IAggregateRoot
 {
     public Guid BookingId { get; set; }
     public decimal Amount { get; set; }

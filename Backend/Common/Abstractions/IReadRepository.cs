@@ -2,7 +2,7 @@
 
 namespace Common.Abstractions;
 
-public interface IReadRepository<T, K> where T : AggregateRoot<K>
+public interface IReadRepository<T, K> where T : IAggregateRoot
 {
     Task<T> GetByIdAsync(K id);
     Task<IEnumerable<T>> GetAllAsync(CancellationToken cancellationToken = default);

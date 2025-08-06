@@ -6,11 +6,11 @@
 ```
 BaseEntity<T> (Generic base)
 ├── BaseEntity (Guid-based)
-└── AggregateRoot<T> (Generic aggregate)
-    └── AggregateRoot (Guid-based)
-        ├── Booking (Aggregate Root)
-        ├── BookingPayment (Aggregate Root)
-        └── CalendarSlotMatrix (Aggregate Root)
+└── AuditableEntity<T>
+    └── AuditableEntity (Guid-based)
+        ├── Booking (IAggregateRoot)
+        ├── BookingPayment (IAggregateRoot)
+        └── CalendarSlotMatrix (IAggregateRoot)
 ```
 
 ### Mối quan hệ chính
@@ -670,10 +670,11 @@ public record BookingCreatedEvent(
 ) : BaseDomainEvent;
 ```
 
-### Các Domain Events hiện có cần update:
+### Các Domain Events hiện có:
 - **`BookingCreatedEvent`**: Khi tạo booking mới
 - **`BookingConfirmedEvent`**: Khi xác nhận booking  
 - **`BookingCancelledEvent`**: Khi hủy booking
+- **`BookingConflictDetectedEvent`**: Khi xảy ra xung đột giữa booking đã confirm với thao tác sân như bảo trì, chặn lịch phía admin
 - **`PaymentCompletedEvent`**: Thanh toán thành công
 - **`PaymentRequiresApprovalEvent`**: Cần admin duyệt thanh toán
 - **`SlotStateChangedEvent`**: Thay đổi trạng thái slot
