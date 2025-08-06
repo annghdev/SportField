@@ -5,6 +5,9 @@ using SportField.FieldService.Domain.Exceptions;
 
 namespace SportField.FieldService.Domain.Entities;
 
+/// <summary>
+/// Đại diện cho một sân cụ thể trong cơ sở (sân bóng đá, sân cầu lông, sân tennis...)
+/// </summary>
 public class Field : AggregateRoot
 {
     public required string Name { get; set; }
@@ -159,7 +162,7 @@ public class Field : AggregateRoot
         ModifiedDate = DateTime.UtcNow;
     }
 
-    public void RemovePricing(string pricingId, string modifiedBy)
+    public void RemovePricing(Guid pricingId, string modifiedBy)
     {
         var pricingToRemove = FieldPricings.FirstOrDefault(p => p.Id == pricingId);
         if (pricingToRemove != null)
@@ -194,7 +197,7 @@ public class Field : AggregateRoot
         return maintenance;
     }
 
-    public void StartMaintenance(string maintenanceId, string startedBy)
+    public void StartMaintenance(Guid maintenanceId, string startedBy)
     {
         var maintenance = MaintenanceSchedules.FirstOrDefault(m => m.Id == maintenanceId);
         if (maintenance == null) throw new KeyNotFoundException("Maintenance schedule not found.");
@@ -204,7 +207,7 @@ public class Field : AggregateRoot
         ModifiedDate = DateTime.UtcNow;
     }
 
-    public void CompleteMaintenance(string maintenanceId, string completedBy, decimal? actualCost = null, string? notes = null)
+    public void CompleteMaintenance(Guid maintenanceId, string completedBy, decimal? actualCost = null, string? notes = null)
     {
         var maintenance = MaintenanceSchedules.FirstOrDefault(m => m.Id == maintenanceId);
         if (maintenance == null) throw new KeyNotFoundException("Maintenance schedule not found.");
@@ -214,7 +217,7 @@ public class Field : AggregateRoot
         ModifiedDate = DateTime.UtcNow;
     }
 
-    public void CancelMaintenance(string maintenanceId, string cancelledBy, string? reason = null)
+    public void CancelMaintenance(Guid maintenanceId, string cancelledBy, string? reason = null)
     {
         var maintenance = MaintenanceSchedules.FirstOrDefault(m => m.Id == maintenanceId);
         if (maintenance == null) throw new KeyNotFoundException("Maintenance schedule not found.");
@@ -224,7 +227,7 @@ public class Field : AggregateRoot
         ModifiedDate = DateTime.UtcNow;
     }
 
-    public void RescheduleMaintenance(string maintenanceId, DateTime newStartTime, DateTime newEndTime, string rescheduledBy, string? reason = null)
+    public void RescheduleMaintenance(Guid maintenanceId, DateTime newStartTime, DateTime newEndTime, string rescheduledBy, string? reason = null)
     {
         var maintenance = MaintenanceSchedules.FirstOrDefault(m => m.Id == maintenanceId);
         if (maintenance == null) throw new KeyNotFoundException("Maintenance schedule not found.");
@@ -244,7 +247,7 @@ public class Field : AggregateRoot
         ModifiedDate = DateTime.UtcNow;
     }
 
-    public void BlockAvailability(string timeSlotId, DateTime fromDate, string blockedBy, DateTime? toDate = null, string? reason = null)
+    public void BlockAvailability(Guid timeSlotId, DateTime fromDate, string blockedBy, DateTime? toDate = null, string? reason = null)
     {
         // Optional: Check for conflicts with existing bookings if this service has access to that info.
         // For now, we just add the block.
@@ -264,7 +267,7 @@ public class Field : AggregateRoot
         ModifiedDate = DateTime.UtcNow;
     }
 
-    public void UnblockAvailability(string availabilityId, string unblockedBy)
+    public void UnblockAvailability(Guid availabilityId, string unblockedBy)
     {
         var block = BlockedAvailabilities.FirstOrDefault(b => b.Id == availabilityId);
         if (block != null)

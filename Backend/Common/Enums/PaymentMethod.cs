@@ -2,11 +2,9 @@ namespace Common.Enums;
 
 public enum PaymentMethod
 {
-    PayLater = 0,       // Trả sau
-    BankTransfer = 1,   // Chuyển khoản
-    MoMo = 2,           // MoMo
-    VnPay = 3,          // VnPay
-    ZaloPay = 4,
-    Paypal = 5,
-    Stripe = 6
-} 
+    Cash = 1,           // Tiền mặt (admin booking)
+    BankTransfer = 2,   // Chuyển khoản (cần ảnh minh chứng)
+    MoMo = 3,          // MoMo e-wallet
+    VnPay = 4,         // VnPay gateway
+    PayLater = 5        // Trả sau (cần admin approve)
+}

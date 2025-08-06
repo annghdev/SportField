@@ -3,9 +3,12 @@ using SportField.FieldService.Domain.Events;
 
 namespace SportField.FieldService.Domain.Entities;
 
+/// <summary>
+/// Quản lý giờ mở/đóng cửa của sân theo từng ngày trong tuần
+/// </summary>
 public class FieldOperatingHours : BaseEntity
 {
-    public required string FieldId { get; set; }
+    public required Guid FieldId { get; set; }
     public DayOfWeek DayOfWeek { get; set; }
     public TimeOnly OpenTime { get; set; }
     public TimeOnly CloseTime { get; set; }
@@ -16,7 +19,7 @@ public class FieldOperatingHours : BaseEntity
     // Navigation property
     public virtual Field Field { get; set; } = null!;
 
-    public static FieldOperatingHours Create(string FieldId, DayOfWeek dayOfWeek, TimeOnly openTime, TimeOnly closeTime, string? notes = null)
+    public static FieldOperatingHours Create(Guid FieldId, DayOfWeek dayOfWeek, TimeOnly openTime, TimeOnly closeTime, string? notes = null)
     {
         var operatingHours = new FieldOperatingHours
         {

@@ -3,7 +3,7 @@ using Common.Abstractions;
 namespace SportField.FieldService.Domain.Events;
 
 public record TimeSlotPriceUpdatedEvent(
-    string CourtId,
+    Guid FieldId,
     string TimeSlotId,
     decimal NewPrice,
     DayOfWeek? DayOfWeek

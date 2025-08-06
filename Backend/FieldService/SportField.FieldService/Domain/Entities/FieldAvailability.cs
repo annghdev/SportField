@@ -1,10 +1,12 @@
 ﻿using Common.Abstractions;
 
 namespace SportField.FieldService.Domain.Entities;
-
-public class FieldAvailability : BaseEntity<string>
+/// <summary>
+/// Chặn các khung thời gian không cho phép booking (sự kiện đặc biệt, reserved...)
+/// </summary>
+public class FieldAvailability : BaseEntity
 {
-    public required string FieldId { get; set; }
+    public Guid FieldId { get; set; }
     public required string TimeSlotId { get; set; }
     public DateTime FromDate { get; set; }
     public DateTime? ToDate { get; set; } // null = vô thời hạn
@@ -15,7 +17,7 @@ public class FieldAvailability : BaseEntity<string>
     public virtual Field Field { get; set; } = null!;
     public virtual TimeSlot TimeSlot { get; set; } = null!;
 
-    public static FieldAvailability CreateBlock(string FieldId, string timeSlotId, DateTime fromDate,
+    public static FieldAvailability CreateBlock(Guid FieldId, string timeSlotId, DateTime fromDate,
         DateTime? toDate = null, string? reason = null)
     {
         return new FieldAvailability

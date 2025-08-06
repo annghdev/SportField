@@ -4,10 +4,13 @@ using SportField.FieldService.Domain.Events;
 
 namespace SportField.FieldService.Domain.Entities;
 
-public class FieldMaintenance : BaseEntity<string>
+/// <summary>
+/// Lập lịch và theo dõi các hoạt động bảo trì, sửa chữa sân
+/// </summary>
+public class FieldMaintenance : BaseEntity
 {
-    public required string FieldId { get; set; }
-    public required string Title { get; set; }
+    public Guid FieldId { get; set; }
+    public string Title { get; set; } = string.Empty;
     public string? Description { get; set; }
     public DateTime StartTime { get; set; }
     public DateTime EndTime { get; set; }
@@ -23,7 +26,7 @@ public class FieldMaintenance : BaseEntity<string>
     // Navigation property
     public virtual Field Field { get; set; } = null!;
 
-    public static FieldMaintenance Schedule(string FieldId, string title, DateTime startTime, DateTime endTime,
+    public static FieldMaintenance Schedule(Guid FieldId, string title, DateTime startTime, DateTime endTime,
         MaintenanceType type, string? description = null, string? assignedTo = null)
     {
         var maintenance = new FieldMaintenance

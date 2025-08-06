@@ -4,7 +4,7 @@ namespace Common.Abstractions
 {
     public abstract class BaseEntity<T>
     {
-        public virtual T Id { get; set; }
+        public virtual T Id { get; set; } = default!;
         private readonly List<BaseDomainEvent> _domainEvents = [];
         [NotMapped]
         public IReadOnlyCollection<BaseDomainEvent> DomainEvents => _domainEvents.AsReadOnly();

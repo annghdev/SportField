@@ -5,11 +5,10 @@
         Pending = 0,
         Expired = 1, // Quá hạn duyệt
         Confirmed = 2,
-        CancelledByUser = 3,
-        CancelledByDueToNonPayment = 4,
-        CancelledByAdmin = 5,
-        NoShow = 6, // Khách không đến
-        Completed = 7, // Đã kết thúc
-        Blocked = 8 // Nghi vấn, gian lận
+        Cancelled = 3,
+        InProgress = 4,
+        NoShow = 5, // Khách không đến
+        Completed = 6, // Đã kết thúc
+        Blocked = 7 // Nghi vấn, gian lận
     }
 }

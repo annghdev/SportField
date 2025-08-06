@@ -2,6 +2,9 @@
 
 namespace SportField.FieldService.Domain.Entities;
 
+/// <summary>
+/// Định nghĩa các khung thời gian cố định có thể đặt sân
+/// </summary>
 public class TimeSlot : BaseEntity<string>
 {
     public TimeOnly StartTime { get; set; }
@@ -16,6 +19,18 @@ public class TimeSlot : BaseEntity<string>
         return new TimeSlot
         {
             Id = Guid.CreateVersion7().ToString(),
+            StartTime = startTime,
+            EndTime = endTime,
+            DurationInMinutes = duration
+        };
+    }
+    public static TimeSlot CreateWithId(string id, TimeOnly startTime, TimeOnly endTime)
+    {
+        var duration = (int)(endTime - startTime).TotalMinutes;
+
+        return new TimeSlot
+        {
+            Id = id,
             StartTime = startTime,
             EndTime = endTime,
             DurationInMinutes = duration

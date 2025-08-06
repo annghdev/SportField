@@ -1267,9 +1267,9 @@
 							"parentStyle": false,
 							"left": 512,
 							"top": 216,
-							"width": 96,
+							"width": 120,
 							"height": 64,
-							"text": "Giá sân tương ứng với khung giờ và ngày"
+							"text": "Giá sân tương ứng với khung giờ và ngày trong tuần"
 						},
 						{
 							"_type": "UMLNoteLinkView",
@@ -1286,7 +1286,7 @@
 								"$ref": "AAAAAAGYdHG714Nl3kg="
 							},
 							"lineStyle": 1,
-							"points": "407:282;511:259"
+							"points": "407:283;511:261"
 						},
 						{
 							"_type": "UMLNoteView",
@@ -1300,7 +1300,7 @@
 							"top": 192,
 							"width": 144,
 							"height": 51,
-							"text": "Giờ mở/đóng cửa của sân cho từng ngày"
+							"text": "Giờ mở/đóng cửa của sân cho từng ngày trong tuần"
 						},
 						{
 							"_type": "UMLNoteLinkView",
@@ -1360,9 +1360,9 @@
 							"parentStyle": false,
 							"left": 448,
 							"top": 528,
-							"width": 152,
-							"height": 51,
-							"text": "Quản lý việc khóa/mở các khung giờ một cách thủ công"
+							"width": 144,
+							"height": 64,
+							"text": "Chặn các khung giờ không cho phép đặt sân cho 1 sự kiện"
 						},
 						{
 							"_type": "UMLNoteLinkView",
@@ -1379,7 +1379,7 @@
 								"$ref": "AAAAAAGYdHVgWIOLtuM="
 							},
 							"lineStyle": 1,
-							"points": "404:506;458:527"
+							"points": "399:506;447:528"
 						}
 					]
 				},

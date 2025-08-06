@@ -3,9 +3,12 @@ using SportField.FieldService.Domain.Events;
 
 namespace SportField.FieldService.Domain.Entities;
 
+/// <summary>
+/// Quản lý giá sân theo khung giờ, ngày trong tuần và thời gian có hiệu lực
+/// </summary>
 public class FieldPricing : BaseEntity
 {
-    public required string FieldId { get; set; }
+    public Guid FieldId { get; set; }
     public required string TimeSlotId { get; set; }
     public decimal Price { get; set; }
     public DayOfWeek? DayOfWeek { get; set; } // null = áp dụng cho tất cả các ngày
@@ -17,7 +20,7 @@ public class FieldPricing : BaseEntity
     public virtual Field Field { get; set; } = null!;
     public virtual TimeSlot TimeSlot { get; set; } = null!;
 
-    public static FieldPricing Create(string FieldId, string timeSlotId, decimal price,
+    public static FieldPricing Create(Guid FieldId, string timeSlotId, decimal price,
         DayOfWeek? dayOfWeek = null, DateTime? effectiveFrom = null, DateTime? effectiveTo = null)
     {
         var pricing = new FieldPricing

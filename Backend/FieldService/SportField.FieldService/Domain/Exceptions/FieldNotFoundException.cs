@@ -1,5 +1,3 @@
-using System;
-
 namespace SportField.FieldService.Domain.Exceptions;
 
 public class FieldNotFoundException : Exception
