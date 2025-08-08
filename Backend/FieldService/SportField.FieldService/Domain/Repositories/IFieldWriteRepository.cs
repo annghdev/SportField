@@ -1,5 +1,4 @@
 using Common.Abstractions;
-using SportField.FieldService.Domain;
 using SportField.FieldService.Domain.Entities;
 
 namespace SportField.FieldService.Domain.Repositories
