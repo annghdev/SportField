@@ -6,4 +6,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Infrastructure\Persistence\Configuration\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SportField.SharedContracts\SportField.SharedContracts.csproj" />
+    <ProjectReference Include="..\SportField.SharedKernel\SportField.SharedKernel.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -2,8 +2,7 @@
 
 public enum FieldType
 {
-    Football5v5 = 0,
-    Football7v7 = 0,
+    FootballMini = 0,
     Badminton = 1,
     PickleBall = 2,
     Tennis = 3,
