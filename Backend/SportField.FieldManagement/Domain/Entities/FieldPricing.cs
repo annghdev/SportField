@@ -3,17 +3,20 @@
     public class FieldPricing : BaseEntity
     {
         public Guid FieldId { get; set; }
-        public required string TimeSlotId { get; set; }
-        public string TimeDisplay { get; set; } = string.Empty;
+        public required string TimeFrameId { get; set; }
         public decimal Price { get; set; }
         public string? DayOfWeek { get; set; } // null khi áp dụng tất cả các ngày trong tuần
         public DateTime? EffectiveFrom { get; set; } // thời gian áp dụng khi có sự kiện khuyến mãi
         public DateTime? EffectiveTo { get; set; }
+
+        // Navigation properties
         public virtual Field? Field { get; set; }
+        public virtual TimeFrame? TimeFrame { get; set; }
+
+        // Factory method
         public static FieldPricing Create(
             Guid fieldId,
-            string timeSlotId,
-            string timeDisplay,
+            string timeFrameId,
             decimal price,
             string? dayOfWeek,
             DateTime? effectiveFrom,
@@ -25,14 +28,13 @@
             var fieldPricing = new FieldPricing
             {
                 FieldId = fieldId,
-                TimeSlotId = timeSlotId,
-                TimeDisplay = timeDisplay,
+                TimeFrameId = timeFrameId,
                 Price = price,
                 DayOfWeek = dayOfWeek,
                 EffectiveFrom = effectiveFrom,
                 EffectiveTo = effectiveTo
             };
-            fieldPricing.AddDomainEvent(new FieldPricingAddEvent(fieldId, fieldPricing.Id, timeSlotId, price, effectiveFrom, effectiveTo));
+            fieldPricing.AddDomainEvent(new FieldPricingAddEvent(fieldId, fieldPricing.Id, timeFrameId, price, effectiveFrom, effectiveTo));
             return fieldPricing;
         }
         public void UpdatePrice(

@@ -9,9 +9,12 @@ public class Field : AuditableEntity, IAggregateRoot
     public string? ImageUrls { get; set; } // Json pattern
     public bool IsActive { get; set; } = true;
 
+    // Navigation properties
     public virtual Facility? Facility { get; set; }
     public virtual ICollection<FieldPricing> FieldPricings { get; set; } = [];
+    public virtual ICollection<FieldMaintenance> FieldMaintenances { get; set; } = [];
 
+    // Factory method
     public static Field Create(
         Guid facilityId,
         string name,

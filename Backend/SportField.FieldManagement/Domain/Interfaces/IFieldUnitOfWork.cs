@@ -2,6 +2,7 @@
 
 public interface IFieldUnitOfWork : IUnitOfWork
 {
-     IFacilityRepository FacilityRepository { get; set; }
-     IFieldRepository FieldRepository { get; set; }
+     IFacilityRepository FacilityRepository { get;}
+     IFieldRepository FieldRepository { get; }
+     ITimeFrameRepository TimeFrameRepository { get; }
 }

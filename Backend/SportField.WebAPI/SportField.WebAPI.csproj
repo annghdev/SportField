@@ -22,12 +22,10 @@
   <ItemGroup>
     <ProjectReference Include="..\SportField.ActivityEventManagement\SportField.ActivityEventManagement.csproj" />
     <ProjectReference Include="..\SportField.BookingManagement\SportField.BookingManagement.csproj" />
-    <ProjectReference Include="..\SportField.CalendarManagement\SportField.CalendarManagement.csproj" />
     <ProjectReference Include="..\SportField.FieldManagement\SportField.FieldManagement.csproj" />
     <ProjectReference Include="..\SportField.FileService\SportField.FileService.csproj" />
     <ProjectReference Include="..\SportField.Identity\SportField.Identity.csproj" />
     <ProjectReference Include="..\SportField.LocationService\SportField.LocationService.csproj" />
-    <ProjectReference Include="..\SportField.MaintenanceManagement\SportField.MaintenanceManagement.csproj" />
     <ProjectReference Include="..\SportField.NotificationService\SportField.NotificationService.csproj" />
     <ProjectReference Include="..\SportField.PaymentService\SportField.PaymentService.csproj" />
     <ProjectReference Include="..\SportField.TrainingManagement\SportField.TrainingManagement.csproj" />

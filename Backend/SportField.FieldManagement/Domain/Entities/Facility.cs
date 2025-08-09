@@ -10,8 +10,11 @@ public class Facility : AuditableEntity, IAggregateRoot
     public TimeOnly CloseTime { get; set; } // Giờ đóng cửa
     public string? ImageUrls { get; set; } // Json pattern
     public bool IsActive { get; set; } = true;
+
+    // Navigation properties
     public virtual ICollection<Field> Fields { get; set; } = [];
 
+    // Factory method
     public static Facility Create(
         string name,
         string? description,

@@ -4,7 +4,7 @@ using System.Linq.Expressions;
 
 namespace SportField.SharedKernel.DomainBase.Interfaces;
 
-public interface IQueryRepository<T, K> where T : IAggregateRoot
+public interface IReadRepository<T, K> where T : class
 {
     Task<T> GetSingleAsync(Expression<Func<T, bool>> filter);
     Task<PagedResult<T>> GetPagedAsync(

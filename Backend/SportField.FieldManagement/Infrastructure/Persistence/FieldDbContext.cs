@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SportField.FieldManagement.Application.ReadModels;
 using System.Reflection;
 
 namespace SportField.FieldManagement.Infrastructure.Persistence;
@@ -12,7 +11,8 @@ public class FieldDbContext : DbContext
     public virtual DbSet<Facility> Facilities { get; set; }
     public virtual DbSet<Field> Fields { get; set; }
     public virtual DbSet<FieldPricing> FieldPricings { get; set; }
-    public virtual DbSet<TimeSlotProjection> TimeSlotProjections { get; set; }
+    public virtual DbSet<FieldMaintenance> FieldMaintenances { get; set; }
+    public virtual DbSet<TimeFrame> TimeFrames { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
